@@ -1,0 +1,34 @@
+﻿@model IEnumerable<SEDC.App.Models.ViewModels.OrdersViewModel>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <h1>@ViewData["Title"]</h1>
+    <p>This is the orders page!</p>
+
+    @foreach (var order in Model)
+    {
+        <ul>
+            <li>Customer: @order.PersonName </li>
+            <li>Pizza: @order.Pizza </li>
+            <li>Pirce: @order.Price </li>
+        </ul>
+    }
+
+    @*<h3>Our First Pizza ever to be delivered was: </h3>
+        <p>@Model.FirstPizza</p>
+        <h3>Our First customer was: </h3>
+        <p>@Model.FirstPersonName</p>
+        <h3>Number of orders: </h3>
+        <p>@Model.NumberOfOrders</p>*@
+
+</body>
+</html>
