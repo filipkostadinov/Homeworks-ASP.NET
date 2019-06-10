@@ -1,0 +1,13 @@
+﻿@model IEnumerable<ToDoTask>
+@{
+    ViewBag.Title = "Not Done";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+@Html.Partial("~/Views/Shared/_HeaderTable.cshtml")
+
+@foreach (var task in Model)
+{
+    @Html.Partial("~/Views/Shared/_TableTasks.cshtml", task)
+}

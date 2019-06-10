@@ -1,0 +1,56 @@
+﻿@model ToDoTask
+
+@{
+    string priority;
+
+    switch (Model.Priority)
+    {
+        case 1:
+            priority = "Important";
+            break;
+        case 2:
+            priority = "Medium importance";
+            break;
+        case 3:
+            priority = "Not important";
+            break;
+        default:
+            priority = "Not importat";
+            break;
+    }
+
+    string symbolStatus;
+    string color;
+    if (Model.Status == "Not Done")
+    {
+        color = "Red";
+        symbolStatus = "10006";
+    }
+    else if (Model.Status == "In Progress")
+    {
+        color = "Yellow";
+        symbolStatus = "10144";
+    }
+    else
+    {
+        color = "Green";
+        symbolStatus = "10004";
+    }
+
+}
+
+<tr>
+    <td>@Model.Title</td>
+    <td>@Model.Description</td>
+    <td>@priority</td>
+    <td style="background-color:@color">@Model.Status</td>
+    <td>@Model.TypeOfTask</td>
+    <td>
+        <ul>
+            @foreach (var item in Model.SubTask)
+            {
+                <li>@item.Title - @item.Description - @item.Status &#@symbolStatus;</li>
+            }
+        </ul>
+    </td>
+</tr>

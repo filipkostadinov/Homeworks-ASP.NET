@@ -1,0 +1,13 @@
+﻿@model IEnumerable<ToDoTask>
+
+@{
+    ViewData["Title"] = "All Done Tasks";
+}
+
+@Html.Partial("~/Views/Shared/_HeaderTable.cshtml")
+
+@foreach (var task in Model)
+{
+    @Html.Partial("~/Views/Shared/_TableTasks.cshtml", task)
+}
+
