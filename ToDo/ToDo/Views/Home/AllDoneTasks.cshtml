@@ -1,13 +1,15 @@
-﻿@model IEnumerable<ToDoTask>
+﻿@model IEnumerable<TaskViewModel>
 
 @{
-    ViewData["Title"] = "All Done Tasks";
+    ViewData["Title"] = "All Finished Tasks";
 }
 
-@Html.Partial("~/Views/Shared/_HeaderTable.cshtml")
+<table>
+    @Html.Partial("~/Views/Shared/_HeaderTable.cshtml")
 
-@foreach (var task in Model)
-{
-    @Html.Partial("~/Views/Shared/_TableTasks.cshtml", task)
-}
+    @foreach (var task in Model)
+    {
+        @Html.Partial("~/Views/Shared/_TableTasks.cshtml", task)
+    }
 
+</table>

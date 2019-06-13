@@ -1,0 +1,30 @@
+﻿@model IEnumerable<UserViewModel>
+@{
+    ViewBag.Title = "User Statistic";
+}
+
+<table>
+    <tr>
+        <th>Name: </th>
+        <th>Age: </th>
+        <th>Average Free Time: </th>
+        <th>Tasks: </th>
+    </tr>
+
+    @foreach (var user in Model)
+    {
+        <tr>
+            <td>@user.Name</td>
+            <td>@user.Age</td>
+            <td>@user.AverageFreeTime min</td>
+            <td>
+                <ul>
+                    @foreach (var task in user.Tasks)
+                    {
+                        <li>@task</li>
+                    }
+                </ul>
+            </td>
+        </tr>
+    }
+</table>

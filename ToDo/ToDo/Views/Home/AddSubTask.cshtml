@@ -1,0 +1,24 @@
+﻿@model SubTask
+
+@{ 
+    ViewBag.Title = "New Sub-Task ";
+}
+
+<h3>Add a new sub-task</h3>
+
+<h4 style="color:red">@ViewBag.Error</h4>
+
+@using (Html.BeginForm())
+{
+    @Html.LabelFor(x => x.Title)
+    @Html.TextBoxFor(x => x.Title)
+    <br />
+    @Html.LabelFor(x => x.Description)
+    @Html.TextBoxFor(x => x.Description)
+    <br />
+    @Html.LabelFor(x => x.TaskName)
+    @Html.TextBoxFor(x => x.TaskName)
+    <br />
+    <br />
+    <button type="submit">Submit</button>
+}

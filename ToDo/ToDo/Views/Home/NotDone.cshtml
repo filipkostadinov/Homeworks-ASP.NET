@@ -1,13 +1,14 @@
-﻿@model IEnumerable<ToDoTask>
+﻿@model IEnumerable<TaskViewModel>
 @{
-    ViewBag.Title = "Not Done";
+    ViewBag.Title = "Unfinished tasks";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
+<table>
+    @Html.Partial("~/Views/Shared/_HeaderTable.cshtml")
 
-@Html.Partial("~/Views/Shared/_HeaderTable.cshtml")
-
-@foreach (var task in Model)
-{
-    @Html.Partial("~/Views/Shared/_TableTasks.cshtml", task)
-}
+    @foreach (var task in Model)
+    {
+        @Html.Partial("~/Views/Shared/_TableTasks.cshtml", task)
+    }
+</table>

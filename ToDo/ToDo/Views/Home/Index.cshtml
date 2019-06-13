@@ -1,12 +1,16 @@
-﻿@model IEnumerable<ToDoTask>
+﻿@model IEnumerable<TaskViewModel>
 @{
     ViewBag.Title = "Home";
 }
 
+<button>@Html.ActionLink("Add task", "AddTask", "Home")</button>
+<button>@Html.ActionLink("Add Sub-Task", "AddSubTask", "Home")</button>
 
-@Html.Partial("~/Views/Shared/_HeaderTable.cshtml")
+<table>
+    @Html.Partial("~/Views/Shared/_HeaderTable.cshtml")
 
-@foreach (var task in Model)
-{
-    @Html.Partial("~/Views/Shared/_TableTasks.cshtml", task)
-}
+    @foreach (var task in Model)
+    {
+        @Html.Partial("~/Views/Shared/_TableTasks.cshtml", task)
+    }
+</table>

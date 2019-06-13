@@ -18,8 +18,13 @@ using ToDo.Models.DomainModels;
 
 #line default
 #line hidden
+#line 2 "C:\Users\Filip Kostadinov\source\repos\ToDo\ToDo\Views\_ViewImports.cshtml"
+using ToDo.Models.ViewModels;
+
+#line default
+#line hidden
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"ecd87a2b47a77c0e95f2198e7e942c07abce186c", @"/Views/_ViewStart.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"d80d5490a87d1ff7b3aa2bfd0acffb5f7d06e68a", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"52726f6fed68f7ce930e8fa56b3f0be80ba0a919", @"/Views/_ViewImports.cshtml")]
     public class Views__ViewStart : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         #pragma warning disable 1998

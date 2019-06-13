@@ -1,0 +1,26 @@
+﻿@model TaskViewModel
+
+@{
+    ViewBag.Title = "New ToDo Task ";
+}
+
+<h3>Add a new task</h3>
+
+@using (Html.BeginForm())
+{
+    @Html.LabelFor(x => x.Title)
+    @Html.TextBoxFor(x => x.Title)
+    <br />
+    @Html.LabelFor(x => x.Description)
+    @Html.TextBoxFor(x => x.Description)
+    <br />
+    @Html.LabelFor(x => x.Priority)
+    @Html.DropDownListFor(x => x.Priority, Html.GetEnumSelectList(Model.Priority.GetType()))
+    <br />
+    @Html.LabelFor(x => x.TypeOfTask)
+    @Html.DropDownListFor(x => x.TypeOfTask, Html.GetEnumSelectList(Model.TypeOfTask.GetType()))
+    <br />
+    <br />
+    <button type="submit">Submit</button>
+
+}

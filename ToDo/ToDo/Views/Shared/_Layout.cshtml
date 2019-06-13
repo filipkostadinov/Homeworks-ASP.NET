@@ -15,15 +15,14 @@
                 <li>@Html.ActionLink("Unfinished Tasks", "NotDone", "Home")</li>
                 <li>@Html.ActionLink("In Progress", "Progress", "Home")</li>
                 <li>@Html.ActionLink("All Finished Tasks", "AllDoneTasks", "Home")</li>
-                <li>@Html.ActionLink("User Statistics", "UserStatistic", "Home")</li>
+                <li>@Html.ActionLink("User Statistics", "UserStatistic", "User")</li>
             </ul>
         </nav>
     </header>
 
-    <h2>@ViewBag.Title</h2>
-    <table>
+    <h1>@ViewBag.Title</h1>
+
         @RenderBody()
-    </table>
 
     <hr />
     <footer>

@@ -22,7 +22,6 @@ C:\Users\Filip Kostadinov\source\repos\ToDo\ToDo\obj\Debug\netcoreapp2.1\ToDo.Ra
 C:\Users\Filip Kostadinov\source\repos\ToDo\ToDo\obj\Debug\netcoreapp2.1\ToDo.Views.pdb
 C:\Users\Filip Kostadinov\source\repos\ToDo\ToDo\obj\Debug\netcoreapp2.1\ToDo.csproj.CopyComplete
 C:\Users\Filip Kostadinov\source\repos\ToDo\ToDo\obj\Debug\netcoreapp2.1\Razor\Views\Home\Progress.g.cshtml.cs
-C:\Users\Filip Kostadinov\source\repos\ToDo\ToDo\obj\Debug\netcoreapp2.1\Razor\Views\Home\UserStatistic.g.cshtml.cs
 C:\Users\Filip Kostadinov\source\repos\ToDo\ToDo\obj\Debug\netcoreapp2.1\Razor\Views\Home\Index.g.cshtml.cs
 C:\Users\Filip Kostadinov\source\repos\ToDo\ToDo\obj\Debug\netcoreapp2.1\Razor\Views\_ViewStart.g.cshtml.cs
 C:\Users\Filip Kostadinov\source\repos\ToDo\ToDo\obj\Debug\netcoreapp2.1\Razor\Views\_ViewImports.g.cshtml.cs
@@ -30,3 +29,7 @@ C:\Users\Filip Kostadinov\source\repos\ToDo\ToDo\obj\Debug\netcoreapp2.1\Razor\V
 C:\Users\Filip Kostadinov\source\repos\ToDo\ToDo\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_TableTasks.g.cshtml.cs
 C:\Users\Filip Kostadinov\source\repos\ToDo\ToDo\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_HeaderTable.g.cshtml.cs
 C:\Users\Filip Kostadinov\source\repos\ToDo\ToDo\obj\Debug\netcoreapp2.1\Razor\Views\Home\AllDoneTasks.g.cshtml.cs
+C:\Users\Filip Kostadinov\source\repos\ToDo\ToDo\obj\Debug\netcoreapp2.1\Razor\Views\Home\AddTask.g.cshtml.cs
+C:\Users\Filip Kostadinov\source\repos\ToDo\ToDo\obj\Debug\netcoreapp2.1\Razor\Views\User\UserStatistic.g.cshtml.cs
+C:\Users\Filip Kostadinov\source\repos\ToDo\ToDo\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_SuccessfulCreatedTask.g.cshtml.cs
+C:\Users\Filip Kostadinov\source\repos\ToDo\ToDo\obj\Debug\netcoreapp2.1\Razor\Views\Home\AddSubTask.g.cshtml.cs
