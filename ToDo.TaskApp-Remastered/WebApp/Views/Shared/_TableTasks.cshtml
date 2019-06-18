@@ -1,0 +1,34 @@
+﻿@model TaskViewModel
+
+@{
+    string color;
+    if (Model.Status.ToString() == "NotDone")
+    {
+        color = "Red";
+    }
+    else if (Model.Status.ToString() == "InProgress")
+    {
+        color = "Yellow";
+    }
+    else
+    {
+        color = "Green";
+    }
+
+}
+
+<tr>
+    <td>@Model.Title</td>
+    <td>@Model.Description</td>
+    <td>@Html.DisplayFor(x => x.Priority)</td>
+    <td style="background-color:@color">@Html.DisplayFor(x => x.Status)</td>
+    <td>@Model.TypeOfTask</td>
+    <td>
+        <ul>
+            @foreach (var item in Model.SubTask)
+            {
+                <li>@item</li>
+            }
+        </ul>
+    </td>
+</tr>

@@ -1,0 +1,39 @@
+﻿
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title-ToDo App</title>
+    <link href="~/css/site.css" rel="stylesheet" />
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                <li>@Html.ActionLink("Unfinished Tasks", "NotDone", "Home")</li>
+                <li>@Html.ActionLink("In Progress", "Progress", "Home")</li>
+                <li>@Html.ActionLink("All Finished Tasks", "AllDoneTasks", "Home")</li>
+                <li>@Html.ActionLink("User Statistics", "UserStatistic", "User")</li>
+            </ul>
+        </nav>
+    </header>
+
+    <h1>@ViewBag.Title</h1>
+
+    @RenderBody()
+
+    <hr />
+    <footer>
+        <h3>Contact: </h3>
+        <p>Tel: +001 123 456</p>
+        <p>Email: info@todo.com</p>
+        <p>&copy;ToDo App</p>
+    </footer>
+
+
+    <script src="~/js/site.js"></script>
+</body>
+</html>
+

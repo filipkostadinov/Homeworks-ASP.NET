@@ -1,0 +1,14 @@
+﻿@model IEnumerable<TaskViewModel>
+@{
+    ViewBag.Title = "Unfinished tasks";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<table>
+    @Html.Partial("~/Views/Shared/_HeaderTable.cshtml")
+
+    @foreach (var task in Model)
+    {
+        @Html.Partial("~/Views/Shared/_TableTasks.cshtml", task)
+    }
+</table>

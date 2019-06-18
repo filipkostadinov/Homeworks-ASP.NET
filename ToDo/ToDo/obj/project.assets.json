@@ -12538,11 +12538,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Filip Kostadinov\\source\\repos\\ToDo\\ToDo\\ToDo.csproj",
+      "projectUniqueName": "C:\\Users\\Filip Kostadinov\\Desktop\\GitHub-Filip\\Homeworks-ASP.NET\\ToDo\\ToDo\\ToDo.csproj",
       "projectName": "ToDo",
-      "projectPath": "C:\\Users\\Filip Kostadinov\\source\\repos\\ToDo\\ToDo\\ToDo.csproj",
+      "projectPath": "C:\\Users\\Filip Kostadinov\\Desktop\\GitHub-Filip\\Homeworks-ASP.NET\\ToDo\\ToDo\\ToDo.csproj",
       "packagesPath": "C:\\Users\\Filip Kostadinov\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Filip Kostadinov\\source\\repos\\ToDo\\ToDo\\obj\\",
+      "outputPath": "C:\\Users\\Filip Kostadinov\\Desktop\\GitHub-Filip\\Homeworks-ASP.NET\\ToDo\\ToDo\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
