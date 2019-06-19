@@ -11,9 +11,9 @@ namespace ToDo.TaskApp.Services.Services
     public class ToDoTaskService : IToDoTaskService
     {
         private IRepository<ToDoTask> _toDoRepository;
-        public ToDoTaskService()
+        public ToDoTaskService(IRepository<ToDoTask> toDoRepo)
         {
-            _toDoRepository = new ToDoTaskRepository();
+            _toDoRepository = toDoRepo;
         }
 
         public void UpdateTask(ToDoTask task)

@@ -11,9 +11,9 @@ namespace ToDo.TaskApp.Services.Services
     {
         private IRepository<User> _userRepository;
 
-        public UserService()
+        public UserService(IRepository<User> userRepo)
         {
-            _userRepository = new UserRepository();
+            _userRepository = userRepo;
         }
 
         public void CreateNewUser(User user)

@@ -710,11 +710,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Filip Kostadinov\\source\\repos\\ToDo.TaskApp\\DataAccess\\DataAccess.csproj",
+      "projectUniqueName": "C:\\Users\\Filip Kostadinov\\Desktop\\ToDo.TaskApp-Remastered\\DataAccess\\DataAccess.csproj",
       "projectName": "DataAccess",
-      "projectPath": "C:\\Users\\Filip Kostadinov\\source\\repos\\ToDo.TaskApp\\DataAccess\\DataAccess.csproj",
+      "projectPath": "C:\\Users\\Filip Kostadinov\\Desktop\\ToDo.TaskApp-Remastered\\DataAccess\\DataAccess.csproj",
       "packagesPath": "C:\\Users\\Filip Kostadinov\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Filip Kostadinov\\source\\repos\\ToDo.TaskApp\\DataAccess\\obj\\",
+      "outputPath": "C:\\Users\\Filip Kostadinov\\Desktop\\ToDo.TaskApp-Remastered\\DataAccess\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -733,8 +733,8 @@
       "frameworks": {
         "netcoreapp2.1": {
           "projectReferences": {
-            "C:\\Users\\Filip Kostadinov\\source\\repos\\ToDo.TaskApp\\Domain\\Domain.csproj": {
-              "projectPath": "C:\\Users\\Filip Kostadinov\\source\\repos\\ToDo.TaskApp\\Domain\\Domain.csproj"
+            "C:\\Users\\Filip Kostadinov\\Desktop\\ToDo.TaskApp-Remastered\\Domain\\Domain.csproj": {
+              "projectPath": "C:\\Users\\Filip Kostadinov\\Desktop\\ToDo.TaskApp-Remastered\\Domain\\Domain.csproj"
             }
           }
         }

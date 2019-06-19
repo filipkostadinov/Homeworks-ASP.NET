@@ -8,19 +8,32 @@
 
 @using (Html.BeginForm())
 {
-    @Html.LabelFor(x => x.Title)
-    @Html.TextBoxFor(x => x.Title)
+    <div class="form-group row">
+        <div class="col-md-4">
+            @Html.LabelFor(x => x.Title)
+            @Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
+        </div>
+    </div>
+    <div class="form-group row">
+        <div class="col-md-4">
+            @Html.LabelFor(x => x.Description)
+            @Html.TextBoxFor(x => x.Description, new { @class = "form-control" })
+        </div>
+    </div>
+    <div class="form-group row">
+        <div class="col-md-4">
+            @Html.LabelFor(x => x.Priority)
+            @Html.DropDownListFor(x => x.Priority, Html.GetEnumSelectList(Model.Priority.GetType()), new { @class = "form-control" })
+        </div>
+    </div>
+    <div class="form-group row">
+        <div class="col-md-4">
+            @Html.LabelFor(x => x.TypeOfTask)
+            @Html.DropDownListFor(x => x.TypeOfTask, Html.GetEnumSelectList(Model.TypeOfTask.GetType()), new { @class = "form-control" })
+        </div>
+    </div>
     <br />
-    @Html.LabelFor(x => x.Description)
-    @Html.TextBoxFor(x => x.Description)
     <br />
-    @Html.LabelFor(x => x.Priority)
-    @Html.DropDownListFor(x => x.Priority, Html.GetEnumSelectList(Model.Priority.GetType()))
-    <br />
-    @Html.LabelFor(x => x.TypeOfTask)
-    @Html.DropDownListFor(x => x.TypeOfTask, Html.GetEnumSelectList(Model.TypeOfTask.GetType()))
-    <br />
-    <br />
-    <button type="submit">Submit</button>
+    <button type="submit" class="btn btn-danger">Submit</button>
 
 }
