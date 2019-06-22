@@ -14,6 +14,7 @@ namespace Services.Helpers
         {
             services.AddTransient<IRepository<ToDoTask>, ToDoTaskRepository>();
             services.AddTransient<IRepository<User>, UserRepository>();
+            services.AddTransient<IRepository<SubTask>, SubTaskRepository>();
             return services;
         }
     }

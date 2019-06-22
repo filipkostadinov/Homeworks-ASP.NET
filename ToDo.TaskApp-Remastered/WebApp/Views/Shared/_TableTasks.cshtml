@@ -27,8 +27,15 @@
         <ul>
             @foreach (var item in Model.SubTask)
             {
-                <li>@item</li>
+                <li>@item.Title - @item.Description - @item.Status</li>
             }
         </ul>
+    </td>
+    <td>
+        <button class="btn btn-danger">@Html.ActionLink("Change Details", "Details", "Home", new { id = Model.Id })</button>
+        @if (Model.Status.ToString() != "Done")
+        {
+            <button class="btn btn-danger">@Html.ActionLink("Add SubTask", "AddSubTask", "Home", new { id = Model.Id })</button>
+        }
     </td>
 </tr>

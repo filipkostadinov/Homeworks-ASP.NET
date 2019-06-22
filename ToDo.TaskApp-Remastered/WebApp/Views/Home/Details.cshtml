@@ -1,10 +1,8 @@
 ﻿@model TaskViewModel
 
 @{
-    ViewBag.Title = "New ToDo Task ";
+    ViewBag.Title = "Details";
 }
-
-<h3>Add a new task</h3>
 
 @using (Html.BeginForm())
 {
@@ -28,12 +26,17 @@
     </div>
     <div class="form-group row">
         <div class="col-md-4">
+            @Html.LabelFor(x => x.Status)
+            @Html.DropDownListFor(x => x.Status, Html.GetEnumSelectList(Model.Status.GetType()), new { @class = "form-control" })
+        </div>
+    </div>
+    <div class="form-group row">
+        <div class="col-md-4">
             @Html.LabelFor(x => x.TypeOfTask)
             @Html.DropDownListFor(x => x.TypeOfTask, Html.GetEnumSelectList(Model.TypeOfTask.GetType()), new { @class = "form-control" })
         </div>
     </div>
     <br />
     <br />
-    <button type="submit" class="btn btn-danger">Add Task</button>
-
+    <button type="submit" class="btn btn-danger">Change Details</button>
 }

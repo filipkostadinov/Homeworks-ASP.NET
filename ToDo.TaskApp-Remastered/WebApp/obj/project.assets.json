@@ -12591,11 +12591,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Filip Kostadinov\\Desktop\\ToDo.TaskApp-Remastered\\WebApp\\WebApp.csproj",
+      "projectUniqueName": "C:\\Users\\Filip Kostadinov\\Desktop\\GitHub-Filip\\Homeworks-ASP.NET\\ToDo.TaskApp-Remastered\\WebApp\\WebApp.csproj",
       "projectName": "WebApp",
-      "projectPath": "C:\\Users\\Filip Kostadinov\\Desktop\\ToDo.TaskApp-Remastered\\WebApp\\WebApp.csproj",
+      "projectPath": "C:\\Users\\Filip Kostadinov\\Desktop\\GitHub-Filip\\Homeworks-ASP.NET\\ToDo.TaskApp-Remastered\\WebApp\\WebApp.csproj",
       "packagesPath": "C:\\Users\\Filip Kostadinov\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Filip Kostadinov\\Desktop\\ToDo.TaskApp-Remastered\\WebApp\\obj\\",
+      "outputPath": "C:\\Users\\Filip Kostadinov\\Desktop\\GitHub-Filip\\Homeworks-ASP.NET\\ToDo.TaskApp-Remastered\\WebApp\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -12614,8 +12614,8 @@
       "frameworks": {
         "netcoreapp2.1": {
           "projectReferences": {
-            "C:\\Users\\Filip Kostadinov\\Desktop\\ToDo.TaskApp-Remastered\\Services\\Services.csproj": {
-              "projectPath": "C:\\Users\\Filip Kostadinov\\Desktop\\ToDo.TaskApp-Remastered\\Services\\Services.csproj"
+            "C:\\Users\\Filip Kostadinov\\Desktop\\GitHub-Filip\\Homeworks-ASP.NET\\ToDo.TaskApp-Remastered\\Services\\Services.csproj": {
+              "projectPath": "C:\\Users\\Filip Kostadinov\\Desktop\\GitHub-Filip\\Homeworks-ASP.NET\\ToDo.TaskApp-Remastered\\Services\\Services.csproj"
             }
           }
         }

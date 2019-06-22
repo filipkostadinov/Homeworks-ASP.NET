@@ -9,11 +9,20 @@ namespace ToDo.TaskApp.DataAccess
     {
         public static List<ToDoTask> Tasks;
         public static List<User> Users;
+        public static List<SubTask> SubTasks;
         public static int TaskId;
         public static int UserId;
+        public static int SubTaskId;
 
         static CacheDb()
         {
+            SubTasks = new List<SubTask>()
+            {
+                new SubTask() { Id = 1 ,Title = "CSS file", Description = "Link css file", Status = Status.NotDone, ToDoTaskId = 1 },
+                new SubTask() { Id = 2, Title = "Black Navbar", Description = "Navbar color should be black", Status = Status.NotDone, ToDoTaskId = 2 },
+                new SubTask() { Id = 3, Title = "Functions to buttons", Description = "Add event listeners to the buttons", Status = Status.Done, ToDoTaskId = 3 },
+                new SubTask() { Id = 4 ,Title = "Id not allows null", Description = "Id column not allows null", Status = Status.Done, ToDoTaskId = 4 }
+            };
             Tasks = new List<ToDoTask>()
             {
                     new ToDoTask()
@@ -24,7 +33,7 @@ namespace ToDo.TaskApp.DataAccess
                     Priority = Priority.Important,
                     Status = Status.NotDone,
                     TypeOfTask = TypeOfTask.Work,
-                    SubTask = { new SubTask() { Title = "CSS file", Description = "Link css file", Status = Status.NotDone } }
+                    SubTask = { SubTasks[0]}
                 },
                     new ToDoTask()
                 {
@@ -34,7 +43,7 @@ namespace ToDo.TaskApp.DataAccess
                     Priority = Priority.MeduimImportance,
                     Status = Status.NotDone,
                     TypeOfTask = TypeOfTask.Hobby,
-                    SubTask = { new SubTask() { Title = "Black Navbar", Description = "Navbar color should be black", Status = Status.NotDone } }
+                    SubTask = { SubTasks[1]}
                 },
                     new ToDoTask()
                 {
@@ -44,7 +53,7 @@ namespace ToDo.TaskApp.DataAccess
                     Priority = Priority.Important,
                     Status = Status.Done,
                     TypeOfTask = TypeOfTask.Work,
-                    SubTask = {new SubTask() { Title = "Functions to buttons", Description = "Add event listeners to the buttons", Status = Status.Done } }
+                    SubTask = { SubTasks[2]}
                 },
                     new ToDoTask()
                 {
@@ -54,10 +63,7 @@ namespace ToDo.TaskApp.DataAccess
                     Priority = Priority.Important,
                     Status = Status.InProgress,
                     TypeOfTask = TypeOfTask.Personal,
-                    SubTask =
-                    {
-                        new SubTask() { Title = "Id not allows null", Description = "Id column not allows null", Status = Status.Done }
-                    }
+                    SubTask = { SubTasks[3]}
                 }
             };
 
@@ -103,6 +109,7 @@ namespace ToDo.TaskApp.DataAccess
 
             TaskId = 4;
             UserId = 4;
+            SubTaskId = 4;
         }
     }
 }

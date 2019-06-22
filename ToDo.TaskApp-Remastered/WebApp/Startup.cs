@@ -36,6 +36,7 @@ namespace WebApp
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
             services.AddTransient<IToDoTaskService, ToDoTaskService>();
             services.AddTransient<IUserService, UserService>();
+            services.AddTransient<ISubTaskService, SubTaskService>();
             DIRepositoryModule.RegisterRepositories(services);
         }
 

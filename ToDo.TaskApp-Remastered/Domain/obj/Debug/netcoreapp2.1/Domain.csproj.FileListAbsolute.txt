@@ -9,7 +9,6 @@ C:\Users\Filip Kostadinov\source\repos\ToDo.TaskApp\Domain\obj\Debug\netcoreapp2
 C:\Users\Filip Kostadinov\Desktop\GitHub-Filip\Homeworks-ASP.NET\ToDo.TaskApp-Remastered\Domain\bin\Debug\netcoreapp2.1\Domain.deps.json
 C:\Users\Filip Kostadinov\Desktop\GitHub-Filip\Homeworks-ASP.NET\ToDo.TaskApp-Remastered\Domain\bin\Debug\netcoreapp2.1\Domain.dll
 C:\Users\Filip Kostadinov\Desktop\GitHub-Filip\Homeworks-ASP.NET\ToDo.TaskApp-Remastered\Domain\bin\Debug\netcoreapp2.1\Domain.pdb
-C:\Users\Filip Kostadinov\Desktop\GitHub-Filip\Homeworks-ASP.NET\ToDo.TaskApp-Remastered\Domain\obj\Debug\netcoreapp2.1\Domain.csprojAssemblyReference.cache
 C:\Users\Filip Kostadinov\Desktop\GitHub-Filip\Homeworks-ASP.NET\ToDo.TaskApp-Remastered\Domain\obj\Debug\netcoreapp2.1\Domain.csproj.CoreCompileInputs.cache
 C:\Users\Filip Kostadinov\Desktop\GitHub-Filip\Homeworks-ASP.NET\ToDo.TaskApp-Remastered\Domain\obj\Debug\netcoreapp2.1\Domain.AssemblyInfoInputs.cache
 C:\Users\Filip Kostadinov\Desktop\GitHub-Filip\Homeworks-ASP.NET\ToDo.TaskApp-Remastered\Domain\obj\Debug\netcoreapp2.1\Domain.AssemblyInfo.cs

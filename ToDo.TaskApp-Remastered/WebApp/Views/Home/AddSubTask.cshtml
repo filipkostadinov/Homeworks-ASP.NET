@@ -1,0 +1,23 @@
+﻿@model SubTaskViewModel
+
+@{
+    ViewBag.Title = "Add Sub Task";
+}
+
+@using (Html.BeginForm())
+{
+    <div class="form-group row">
+        <div class="col-md-4">
+            @Html.HiddenFor(x => x.ToDoTaskId)
+            @Html.LabelFor(x => x.Title)
+            @Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
+        </div>
+    </div>
+    <div class="form-group row">
+        <div class="col-md-4">
+            @Html.LabelFor(x => x.Description)
+            @Html.TextBoxFor(x => x.Description, new { @class = "form-control" })
+        </div>
+    </div>
+    <button type="submit" class="btn btn-danger">Add SubTask</button>
+}

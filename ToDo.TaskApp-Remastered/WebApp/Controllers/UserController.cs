@@ -33,10 +33,11 @@ namespace WebApp.Controllers
                 viewModelUsers.Add(
                     new UserViewModel()
                     {
+                        Id = user.Id,
                         Name = $"{user.FirstName} {user.LastName}",
                         Age = user.Age,
                         AverageFreeTime = user.AverageFreeTime,
-                        Tasks = user.Tasks.Select(t => new { ShortcutTask = $"{t.Title} - {t.Status}" }).Select(x => x.ShortcutTask)
+                        Tasks = user.Tasks.Select(t => new { ShortcutTask = $"{t.Title} - {t.Status}" }).Select(x => x.ShortcutTask).ToList()
                     });
             }
 

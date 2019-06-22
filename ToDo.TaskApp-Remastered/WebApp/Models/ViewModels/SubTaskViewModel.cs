@@ -1,11 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Text;
+using System.Linq;
+using System.Threading.Tasks;
+using ToDo.TaskApp.Domain;
 
-namespace ToDo.TaskApp.Domain
+namespace WebApp.Models.ViewModels
 {
-    public class SubTask
+    public class SubTaskViewModel
     {
         public int Id { get; set; }
         public string Title { get; set; }

@@ -9,12 +9,13 @@ namespace WebApp.Models.ViewModels
 {
     public class TaskViewModel
     {
+        public int Id { get; set; }
         public string Title { get; set; }
         public string Description { get; set; }
         public Priority Priority { get; set; }
         public Status Status { get; set; }
         [Display(Name = "Type Of Task")]
         public TypeOfTask TypeOfTask { get; set; }
-        public IEnumerable<string> SubTask { get; set; }
+        public List<SubTaskViewModel> SubTask { get; set; }
     }
 }

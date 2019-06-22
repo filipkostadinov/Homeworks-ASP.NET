@@ -13,10 +13,12 @@ namespace WebApp.Controllers
     public class HomeController : Controller
     {
         private IToDoTaskService _toDoTaskService;
+        private ISubTaskService _subTaskService;
 
-        public HomeController(IToDoTaskService toDoTaskService)
+        public HomeController(IToDoTaskService toDoTaskService, ISubTaskService subTaskService)
         {
             _toDoTaskService = toDoTaskService;
+            _subTaskService = subTaskService;
         }
 
         public IActionResult Index()
@@ -66,22 +68,104 @@ namespace WebApp.Controllers
             _toDoTaskService.MakeNewTask(task);
 
             return View("_SuccessfulCreatedTask");
-        }        
+        }
+        public IActionResult AddSubTask(int? id)
+        {
+            SubTaskViewModel model = new SubTaskViewModel() { ToDoTaskId = id.Value};
+            return View(model);
+        }
+        [HttpPost]
+        public IActionResult AddSubTask(SubTaskViewModel model)
+        {
+            SubTask subTask = new SubTask()
+            {
+                Title = model.Title,
+                Description = model.Description,
+                Status = Status.NotDone,
+                ToDoTaskId = model.ToDoTaskId
+            };
+            _subTaskService.CreateNewSubTask(subTask);
 
-        public static List<TaskViewModel> MappingToViewModels(List<ToDoTask> tasks)
+            return View("_AddedNewSubTask");
+        }
+        public IActionResult Details(int? id)
+        {
+            ToDoTask task = _toDoTaskService.GetAllTasks().SingleOrDefault(x => x.Id == id);
+            List<SubTaskViewModel> subTasksModel = new List<SubTaskViewModel>();
+
+            foreach (var subTask in task.SubTask)
+            {
+                subTasksModel.Add(new SubTaskViewModel()
+                {
+                    Id = subTask.Id,
+                    Title = subTask.Title,
+                    Description = subTask.Description,
+                    Status = subTask.Status,
+                    ToDoTaskId = subTask.ToDoTaskId
+                });
+            }
+
+            TaskViewModel model = new TaskViewModel()
+            {
+                Id = task.Id,
+                Title = task.Title,
+                Description = task.Description,
+                Priority = task.Priority,
+                Status = task.Status,
+                TypeOfTask = task.TypeOfTask,
+                SubTask = subTasksModel
+            };
+            return View(model);
+        }
+        [HttpPost]
+        public IActionResult Details(TaskViewModel model)
+        {
+            List<SubTask> subTasks = _toDoTaskService.GetTaskById(model.Id).SubTask;
+            
+            ToDoTask task = new ToDoTask()
+            {
+                Id = model.Id,
+                Title = model.Title,
+                Description = model.Description,
+                Priority = model.Priority,
+                Status = model.Status,
+                TypeOfTask = model.TypeOfTask,
+                SubTask = subTasks
+            };
+            _toDoTaskService.UpdateTask(task);
+
+            return RedirectToAction("Index");
+        }
+
+
+            public static List<TaskViewModel> MappingToViewModels(List<ToDoTask> tasks)
         {
             List<TaskViewModel> viewModelTasks = new List<TaskViewModel>();
             foreach (var task in tasks)
             {
+                List<SubTaskViewModel> subTasks = new List<SubTaskViewModel>();
+                foreach (var subTask in task.SubTask)
+                {
+                    subTasks.Add(new SubTaskViewModel()
+                    {
+                        Id = subTask.Id,
+                        Title = subTask.Title,
+                        Description = subTask.Description,
+                        Status = subTask.Status,
+                        ToDoTaskId = subTask.ToDoTaskId
+                    });
+                }
+
                 viewModelTasks.Add(
                     new TaskViewModel()
                     {
+                        Id = task.Id,
                         Title = task.Title,
                         Description = task.Description,
                         Priority = task.Priority,
                         Status = task.Status,
                         TypeOfTask = task.TypeOfTask,
-                        SubTask = task.SubTask.Select(s => new { SubTask = $"{s.Title} - {s.Description} - {s.Status}" }).Select(x => x.SubTask)
+                        SubTask = subTasks
                     });
             }
 
