@@ -1,0 +1,17 @@
+﻿@model IEnumerable<TaskViewModel>
+
+@{
+    ViewData["Title"] = "All Finished Tasks";
+}
+
+<table class="table">
+    @Html.Partial("~/Views/Shared/_HeaderTable.cshtml")
+
+    @foreach (var task in Model)
+    {
+        @Html.Partial("~/Views/Shared/_TableTasks.cshtml", task)
+    }
+
+</table>
+<br />
+<button class="btn btn-danger">@Html.ActionLink("Add task", "AddTask", "Home")</button>
