@@ -134,7 +134,7 @@ namespace WebApp.Controllers
             };
             _toDoTaskService.UpdateTask(task);
 
-            return RedirectToAction("Index");
+            return View("_SuccessfulEditDetails");
         }
 
 

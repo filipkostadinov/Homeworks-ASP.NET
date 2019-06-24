@@ -121,3 +121,4 @@ C:\Users\Filip Kostadinov\Desktop\ToDo.TaskApp-Remastered\WebApp\obj\Debug\netco
 C:\Users\Filip Kostadinov\Desktop\GitHub-Filip\Homeworks-ASP.NET\ToDo.TaskApp-Remastered\WebApp\obj\Debug\netcoreapp2.1\Razor\Views\Home\AddSubTask.g.cshtml.cs
 C:\Users\Filip Kostadinov\Desktop\GitHub-Filip\Homeworks-ASP.NET\ToDo.TaskApp-Remastered\WebApp\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_AddedNewSubTask.g.cshtml.cs
 C:\Users\Filip Kostadinov\Desktop\GitHub-Filip\Homeworks-ASP.NET\ToDo.TaskApp-Remastered\WebApp\obj\Debug\netcoreapp2.1\Razor\Views\Home\Details.g.cshtml.cs
+C:\Users\Filip Kostadinov\Desktop\GitHub-Filip\Homeworks-ASP.NET\ToDo.TaskApp-Remastered\WebApp\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_SuccessfulEditDetails.g.cshtml.cs
