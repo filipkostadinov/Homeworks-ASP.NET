@@ -32,3 +32,12 @@ C:\Users\Filip Kostadinov\Desktop\ToDo.TaskApp-WithEntity\Domain\obj\Debug\netco
 C:\Users\Filip Kostadinov\Desktop\ToDo.TaskApp-WithEntity\Domain\obj\Debug\netcoreapp2.1\Domain.AssemblyInfo.cs
 C:\Users\Filip Kostadinov\Desktop\ToDo.TaskApp-WithEntity\Domain\obj\Debug\netcoreapp2.1\Domain.dll
 C:\Users\Filip Kostadinov\Desktop\ToDo.TaskApp-WithEntity\Domain\obj\Debug\netcoreapp2.1\Domain.pdb
+C:\Users\Filip Kostadinov\Desktop\GitHub-Filip\Homeworks-ASP.NET\ToDo.TaskApp-WithEntity\Domain\bin\Debug\netcoreapp2.1\Domain.deps.json
+C:\Users\Filip Kostadinov\Desktop\GitHub-Filip\Homeworks-ASP.NET\ToDo.TaskApp-WithEntity\Domain\bin\Debug\netcoreapp2.1\Domain.dll
+C:\Users\Filip Kostadinov\Desktop\GitHub-Filip\Homeworks-ASP.NET\ToDo.TaskApp-WithEntity\Domain\bin\Debug\netcoreapp2.1\Domain.pdb
+C:\Users\Filip Kostadinov\Desktop\GitHub-Filip\Homeworks-ASP.NET\ToDo.TaskApp-WithEntity\Domain\obj\Debug\netcoreapp2.1\Domain.csprojAssemblyReference.cache
+C:\Users\Filip Kostadinov\Desktop\GitHub-Filip\Homeworks-ASP.NET\ToDo.TaskApp-WithEntity\Domain\obj\Debug\netcoreapp2.1\Domain.csproj.CoreCompileInputs.cache
+C:\Users\Filip Kostadinov\Desktop\GitHub-Filip\Homeworks-ASP.NET\ToDo.TaskApp-WithEntity\Domain\obj\Debug\netcoreapp2.1\Domain.AssemblyInfoInputs.cache
+C:\Users\Filip Kostadinov\Desktop\GitHub-Filip\Homeworks-ASP.NET\ToDo.TaskApp-WithEntity\Domain\obj\Debug\netcoreapp2.1\Domain.AssemblyInfo.cs
+C:\Users\Filip Kostadinov\Desktop\GitHub-Filip\Homeworks-ASP.NET\ToDo.TaskApp-WithEntity\Domain\obj\Debug\netcoreapp2.1\Domain.dll
+C:\Users\Filip Kostadinov\Desktop\GitHub-Filip\Homeworks-ASP.NET\ToDo.TaskApp-WithEntity\Domain\obj\Debug\netcoreapp2.1\Domain.pdb
