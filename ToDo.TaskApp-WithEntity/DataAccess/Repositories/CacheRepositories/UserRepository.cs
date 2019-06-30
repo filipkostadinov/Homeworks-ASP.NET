@@ -1,4 +1,5 @@
 ﻿using DataAccess;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,7 +14,6 @@ namespace ToDo.TaskApp.DataAccess.Repositories.CacheRepositories
         public UserRepository(ToDoTaskDbContext context)
         {
             _dbContext = context;
-            _dbContext.SaveChanges();
         }
         public void DeleteById(int id)
         {
@@ -22,31 +22,23 @@ namespace ToDo.TaskApp.DataAccess.Repositories.CacheRepositories
             {
                 _dbContext.Users.Remove(user);
                 _dbContext.SaveChanges();
-
             }
         }
 
         public List<User> GetAll()
         {
-            var tasks = _dbContext.ToDoTasks.ToList();
-            var users = _dbContext.Users.ToList();
-            foreach (var user in users)
-            {
-                user.Tasks = tasks.Where(x => x.UserId == user.Id).ToList();
-            }
-
-            return users;
+            return _dbContext.Users
+                .Include(x => x.Tasks)
+                .ToList();
         }
 
         public User GetById(int id)
         {
-            return _dbContext.Users.FirstOrDefault(u => u.Id == id);
+            return _dbContext.Users.Include(x => x.Tasks).FirstOrDefault(u => u.Id == id);
         }
 
         public void Insert(User entity)
         {
-            //CacheDb.UserId++;
-            //entity.Id = CacheDb.UserId;
             _dbContext.Users.Add(entity);
             _dbContext.SaveChanges();
         }
@@ -57,8 +49,11 @@ namespace ToDo.TaskApp.DataAccess.Repositories.CacheRepositories
 
             if (user != null)
             {
-                int index = _dbContext.Users.ToList().IndexOf(user);
-                _dbContext.Users.ToList()[index] = entity;
+                user.Id = entity.Id;
+                user.FirstName = entity.FirstName;
+                user.LastName = entity.LastName;
+                user.Age = entity.Age;
+                user.AverageFreeTime = entity.AverageFreeTime;
                 _dbContext.SaveChanges();
 
             }

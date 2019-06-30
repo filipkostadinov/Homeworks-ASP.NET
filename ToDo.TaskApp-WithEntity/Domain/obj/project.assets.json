@@ -694,11 +694,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Filip Kostadinov\\Desktop\\ToDo.TaskApp-Remastered\\Domain\\Domain.csproj",
+      "projectUniqueName": "C:\\Users\\Filip Kostadinov\\Desktop\\ToDo.TaskApp-WithEntity\\Domain\\Domain.csproj",
       "projectName": "Domain",
-      "projectPath": "C:\\Users\\Filip Kostadinov\\Desktop\\ToDo.TaskApp-Remastered\\Domain\\Domain.csproj",
+      "projectPath": "C:\\Users\\Filip Kostadinov\\Desktop\\ToDo.TaskApp-WithEntity\\Domain\\Domain.csproj",
       "packagesPath": "C:\\Users\\Filip Kostadinov\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Filip Kostadinov\\Desktop\\ToDo.TaskApp-Remastered\\Domain\\obj\\",
+      "outputPath": "C:\\Users\\Filip Kostadinov\\Desktop\\ToDo.TaskApp-WithEntity\\Domain\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

@@ -30,6 +30,16 @@ namespace WebApp.Controllers
             List<UserViewModel> viewModelUsers = new List<UserViewModel>();
             foreach (var user in users)
             {
+                List<TaskViewModel> tasks = new List<TaskViewModel>();
+                foreach (var task in user.Tasks)
+                {
+                    tasks.Add(
+                        new TaskViewModel()
+                        {
+                            Title = task.Title,
+                            Status = task.Status
+                        });
+                }
                 viewModelUsers.Add(
                     new UserViewModel()
                     {
@@ -37,7 +47,7 @@ namespace WebApp.Controllers
                         Name = $"{user.FirstName} {user.LastName}",
                         Age = user.Age,
                         AverageFreeTime = user.AverageFreeTime,
-                        Tasks = user.Tasks.Select(t => new { ShortcutTask = $"{t.Title} - {t.Status}" }).Select(x => x.ShortcutTask).ToList()
+                        Tasks = tasks
                     });
             }
 

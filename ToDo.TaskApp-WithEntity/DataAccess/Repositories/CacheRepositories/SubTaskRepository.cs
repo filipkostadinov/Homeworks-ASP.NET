@@ -15,7 +15,6 @@ namespace ToDo.TaskApp.DataAccess.Repositories.CacheRepositories
         public SubTaskRepository(ToDoTaskDbContext context)
         {
             _dbContext = context;
-            _dbContext.SaveChanges();
         }
         public void DeleteById(int id)
         {
@@ -24,7 +23,6 @@ namespace ToDo.TaskApp.DataAccess.Repositories.CacheRepositories
             {
                 _dbContext.SubTasks.Remove(subTask);
                 _dbContext.SaveChanges();
-
             }
         }
 
@@ -40,10 +38,6 @@ namespace ToDo.TaskApp.DataAccess.Repositories.CacheRepositories
 
         public void Insert(SubTask entity)
         {
-            //CacheDb.SubTaskId++;
-            //entity.Id = CacheDb.SubTaskId;
-            entity.ToDoTask = _dbContext.ToDoTasks.FirstOrDefault(x => x.Id == entity.ToDoTaskId);
-            _dbContext.ToDoTasks.FirstOrDefault(x => x.Id == entity.ToDoTaskId).SubTask.Add(entity);
             _dbContext.SubTasks.Add(entity);
             _dbContext.SaveChanges();
 
@@ -54,10 +48,14 @@ namespace ToDo.TaskApp.DataAccess.Repositories.CacheRepositories
             SubTask subTask = _dbContext.SubTasks.FirstOrDefault(x => x.Id == entity.Id);
             if (subTask != null)
             {
-                int index = _dbContext.SubTasks.ToList().IndexOf(subTask);
-                _dbContext.SubTasks.ToList()[index] = entity;
-                _dbContext.SaveChanges();
+                subTask.Id = entity.Id;
+                subTask.Title = entity.Title;
+                subTask.Description = entity.Description;
+                subTask.Status = entity.Status;
+                subTask.ToDoTaskId = entity.ToDoTaskId;
 
+                _dbContext.Update(subTask);
+                _dbContext.SaveChanges();
             }
         }
     }

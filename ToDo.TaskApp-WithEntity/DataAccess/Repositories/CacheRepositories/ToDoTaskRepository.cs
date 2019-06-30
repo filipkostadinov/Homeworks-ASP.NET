@@ -1,4 +1,5 @@
 ﻿using DataAccess;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,7 +14,6 @@ namespace ToDo.TaskApp.DataAccess.Repositories.CacheRepositories
         public ToDoTaskRepository(ToDoTaskDbContext context)
         {
             _dbContext = context;
-            _dbContext.SaveChanges();
         }
         public void DeleteById(int id)
         {
@@ -22,32 +22,25 @@ namespace ToDo.TaskApp.DataAccess.Repositories.CacheRepositories
             {
                 _dbContext.ToDoTasks.Remove(task);
                 _dbContext.SaveChanges();
-
             }
         }
 
         public List<ToDoTask> GetAll()
         {
-            var subTasks = _dbContext.SubTasks.ToList();
-            var tasks = _dbContext.ToDoTasks.ToList();
-            foreach (var task in tasks)
-            {
-                task.SubTask = subTasks.Where(x => x.ToDoTaskId == task.Id).ToList();
-            }
-            
-            return tasks;
+            return _dbContext.ToDoTasks
+                .Include(x => x.SubTask)
+                .ToList();
         }
 
         public ToDoTask GetById(int id)
         {
-            return _dbContext.ToDoTasks.FirstOrDefault(t => t.Id == id);
+            return _dbContext.ToDoTasks
+                .Include(x => x.SubTask)
+                .FirstOrDefault(t => t.Id == id);
         }
 
         public void Insert(ToDoTask entity)
         {
-            entity.User = _dbContext.Users.FirstOrDefault(x => x.Id == entity.UserId);
-            //CacheDb.TaskId++;
-            //entity.Id = CacheDb.TaskId;
             _dbContext.ToDoTasks.Add(entity);
             _dbContext.SaveChanges();
         }
@@ -58,8 +51,15 @@ namespace ToDo.TaskApp.DataAccess.Repositories.CacheRepositories
 
             if (task != null)
             {
-                int index = _dbContext.ToDoTasks.ToList().IndexOf(task);
-                _dbContext.ToDoTasks.ToList()[index] = entity;
+                task.Id = entity.Id;
+                task.Title = entity.Title;
+                task.Description = entity.Description;
+                task.Priority = entity.Priority;
+                task.Status = entity.Status;
+                task.TypeOfTask = entity.TypeOfTask;
+                task.UserId = entity.UserId;
+
+                _dbContext.Update(task);
                 _dbContext.SaveChanges();
             }
         }

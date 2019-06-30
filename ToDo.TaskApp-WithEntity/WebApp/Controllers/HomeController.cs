@@ -63,7 +63,6 @@ namespace WebApp.Controllers
                 Priority = model.Priority,
                 Status = Status.NotDone,
                 TypeOfTask = model.TypeOfTask,
-                User = new User(),
                 UserId = 1
             };
 
@@ -85,7 +84,6 @@ namespace WebApp.Controllers
                 Description = model.Description,
                 Status = Status.NotDone,
                 ToDoTaskId = model.ToDoTaskId,
-                ToDoTask = new ToDoTask()
             };
             _subTaskService.CreateNewSubTask(subTask);
 
@@ -94,20 +92,6 @@ namespace WebApp.Controllers
         public IActionResult Details(int? id)
         {
             ToDoTask task = _toDoTaskService.GetAllTasks().SingleOrDefault(x => x.Id == id);
-            List<SubTaskViewModel> subTasksModel = new List<SubTaskViewModel>();
-
-            foreach (var subTask in task.SubTask)
-            {
-                subTasksModel.Add(new SubTaskViewModel()
-                {
-                    Id = subTask.Id,
-                    Title = subTask.Title,
-                    Description = subTask.Description,
-                    Status = subTask.Status,
-                    ToDoTaskId = subTask.ToDoTaskId
-                });
-            }
-
             TaskViewModel model = new TaskViewModel()
             {
                 Id = task.Id,
@@ -116,15 +100,12 @@ namespace WebApp.Controllers
                 Priority = task.Priority,
                 Status = task.Status,
                 TypeOfTask = task.TypeOfTask,
-                SubTask = subTasksModel
             };
             return View(model);
         }
         [HttpPost]
         public IActionResult Details(TaskViewModel model)
         {
-            List<SubTask> subTasks = _toDoTaskService.GetTaskById(model.Id).SubTask;
-
             ToDoTask task = new ToDoTask()
             {
                 Id = model.Id,
@@ -133,8 +114,6 @@ namespace WebApp.Controllers
                 Priority = model.Priority,
                 Status = model.Status,
                 TypeOfTask = model.TypeOfTask,
-                SubTask = subTasks,
-                User = new User(),
                 UserId = 1
             };
             _toDoTaskService.UpdateTask(task);
@@ -143,7 +122,7 @@ namespace WebApp.Controllers
         }
 
 
-            public static List<TaskViewModel> MappingToViewModels(List<ToDoTask> tasks)
+        public static List<TaskViewModel> MappingToViewModels(List<ToDoTask> tasks)
         {
             List<TaskViewModel> viewModelTasks = new List<TaskViewModel>();
             foreach (var task in tasks)
@@ -173,7 +152,6 @@ namespace WebApp.Controllers
                         SubTask = subTasks
                     });
             }
-
             return viewModelTasks;
         }
     }

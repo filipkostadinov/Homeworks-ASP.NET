@@ -11,6 +11,6 @@ namespace WebApp.Models.ViewModels
         public string Name { get; set; }
         public int Age { get; set; }
         public double AverageFreeTime { get; set; }
-        public List<string> Tasks { get; set; }
+        public List<TaskViewModel> Tasks { get; set; }
     }
 }

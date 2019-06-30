@@ -16,6 +16,5 @@ namespace ToDo.TaskApp.Domain
         public int Age { get; set; }
         public double AverageFreeTime { get; set; }
         public List<ToDoTask> Tasks { get; set; } = new List<ToDoTask>();
-
     }
 }
